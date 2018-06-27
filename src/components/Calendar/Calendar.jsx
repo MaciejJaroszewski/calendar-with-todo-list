@@ -11,11 +11,12 @@ import { DATES } from "../common/const";
 const TODAY = DATES.today();
 
 class Calendar extends Component {
-  updateMonth(add) {
-    const { selected } = this.props;
+  updateMonth = add => {
+    const { selected: current } = this.props;
+    const selected = new Date(current.getTime());
     selected.setMonth(selected.getMonth() + add);
     this.props.onDateSelect(selected);
-  }
+  };
 
   prev = () => this.updateMonth(-1);
   next = () => this.updateMonth(1);
