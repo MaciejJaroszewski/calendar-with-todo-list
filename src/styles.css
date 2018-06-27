@@ -1,0 +1,264 @@
+/*  css file generated via https://www.sassmeister.com/ from scss files  */
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+.noselect,
+.calendar-wrapper .day-headers,
+.calendar-wrapper .month-title,
+.header .header-day,
+.header {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.flex-row,
+.todo-list-container .task-item,
+.todo-list-container .todo-add-new {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col,
+.todo-list-container,
+.calendar-wrapper,
+.app-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.center,
+.header,
+.app-container {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.app-container {
+  flex: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.header {
+  flex: 2;
+  width: 100%;
+  min-width: 350px;
+  background-color: #00c1a6;
+  padding: 16px 32px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.header .header-month {
+  font-size: 1.8em;
+  font-weight: lighter;
+}
+.header .header-day {
+  font-size: 4em;
+  font-weight: bold;
+}
+
+svg {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.operations {
+  margin-top: 36px;
+}
+.operations .operations-buttons button {
+  padding: 12px 16px;
+  font-size: 13px;
+  background-color: white;
+  border-radius: 4px;
+  width: 100px;
+}
+.operations .operations-buttons button:focus {
+  outline: none;
+}
+.operations .gdpr-staff {
+  color: gray;
+}
+
+.calendar-wrapper {
+  width: 50%;
+  border-right: 1px solid #ddd;
+}
+.calendar-wrapper .month {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px 20px 0px;
+}
+.calendar-wrapper .month-title {
+  text-align: center;
+  flex: 4;
+}
+.calendar-wrapper .month-year {
+  font-size: 0.8em;
+  color: #aaa;
+}
+.calendar-wrapper .month-arrow-left {
+  flex: 1;
+  width: 24px;
+  height: 24px;
+}
+.calendar-wrapper .month-arrow-right {
+  width: 24px;
+  height: 24px;
+  flex: 1;
+}
+.calendar-wrapper .footer {
+  width: 100%;
+  min-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  text-align: center;
+  cursor: default;
+}
+.calendar-wrapper .day-headers {
+  flex-basis: 14%;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0px 8px 0px;
+  font-weight: bold;
+}
+.calendar-wrapper .day {
+  flex-basis: 14%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0px 8px 0px;
+  position: relative;
+}
+.calendar-wrapper .day p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.calendar-wrapper .day p.today {
+  border-color: #00c1a6;
+}
+.calendar-wrapper .day p.selected {
+  background-color: #00c1a6;
+  color: #ffffff;
+}
+.calendar-wrapper .day,
+.calendar-wrapper p {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.calendar-wrapper .day p {
+  border-radius: 15px;
+  width: 30px;
+  height: 30px;
+}
+.calendar-wrapper .non-current {
+  opacity: 0.2;
+}
+.calendar-wrapper .to-do:after,
+.calendar-wrapper .all-done:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  background: gray;
+}
+.calendar-wrapper .to-do:after {
+  background: red;
+}
+
+.todo-list-container {
+  align-items: center;
+  margin-top: 24px;
+  width: 50%;
+  flex: 1;
+}
+.todo-list-container .todo-add-new {
+  justify-content: space-between;
+  padding: 4px 12px;
+  border: 1px solid #00c1a6;
+  color: #00c1a6;
+  border-radius: 10px;
+  width: 80%;
+  cursor: pointer;
+  margin-bottom: 12px;
+  align-items: center;
+}
+.todo-list-container .todo-add-new svg {
+  fill: #00c1a6;
+  width: 24px;
+  height: 24px;
+}
+.todo-list-container .task-item {
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-top: 12px;
+}
+.todo-list-container .task-item span {
+  flex-grow: 1;
+  text-align: left;
+  margin-left: 12px;
+}
+.todo-list-container .task-item .add-task-input {
+  border: none;
+  border-bottom: 1px solid gray;
+  font-size: 16px;
+  width: 100%;
+  flex-grow: 1;
+  font-family: "Open Sans", sans-serif;
+  margin: 0 8px 0 16px;
+  padding-left: 4px;
+  height: 24px;
+}
+.todo-list-container .task-item .add-task-input:focus {
+  outline: none;
+  border-bottom: 1px solid #00c1a6;
+}
+.todo-list-container .task-item.done span {
+  text-decoration: line-through;
+  color: #aaa;
+}
+.todo-list-container .task-item.done .delete-icon {
+  fill: #aaa;
+  width: 24px;
+}
+.todo-list-container .task-item svg {
+  height: 24px;
+  margin-right: 8px;
+}
+.todo-list-container .tasks-summary {
+  width: 80%;
+  margin-top: 16px;
+  border-top: 1px solid #aaa;
+  padding-top: 8px;
+  color: #aaa;
+}

@@ -1,2 +1,1 @@
-# calendar-with-todo-list
-Created with CodeSandbox
+# Simple Calendar with ToDo List

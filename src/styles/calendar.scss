@@ -1,0 +1,123 @@
+.calendar-wrapper {
+  @extend .flex-col;
+
+  width: 50%;
+  border-right: 1px solid #ddd;
+
+  .month {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px 20px 0px;
+  }
+
+  .month-title {
+    @extend .noselect;
+
+    text-align: center;
+    flex: 4;
+  }
+
+  .month-year {
+    font-size: 0.8em;
+    color: #aaa;
+  }
+
+  .month-arrow-left {
+    flex: 1;
+    width: 24px;
+    height: 24px;
+  }
+
+  .month-arrow-right {
+    width: 24px;
+    height: 24px;
+    flex: 1;
+  }
+
+  .footer {
+    width: 100%;
+    min-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    text-align: center;
+    cursor: default;
+  }
+
+  .day-headers {
+    @extend .noselect;
+
+    flex-basis: 14%;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0px 8px 0px;
+    font-weight: bold;
+  }
+
+  .day {
+    flex-basis: 14%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0px 8px 0px;
+    position: relative;
+
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &.today {
+        border-color: $accent-color;
+      }
+
+      &.selected {
+        background-color: $accent-color;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .day,
+  p {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .day {
+    p {
+      border-radius: 15px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .non-current {
+    opacity: 0.2;
+  }
+
+  .to-do,
+  .all-done {
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      top: 10px;
+      right: 10px;
+      border-radius: 50%;
+      background: gray;
+    }
+  }
+
+  .to-do {
+    &:after {
+      background: red;
+    }
+  }
+}

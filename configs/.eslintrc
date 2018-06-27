@@ -1,0 +1,77 @@
+{
+  "env": {
+    "browser": true,
+      "es6": true,
+        "jest": true,
+          "node": true
+  },
+  "extends": ["eslint:recommended", "plugin:prettier/recommended", "plugin:react/recommended"],
+    "parser": "babel-eslint",
+      "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+        "jsx": true
+    },
+    "ecmaVersion": 6,
+      "sourceType": "module"
+  },
+  "plugins": ["react", "import"],
+    "rules": {
+    "array-bracket-spacing": ["error", "never"],
+      "arrow-parens": ["error", "as-needed"],
+        "arrow-spacing": ["error", { "before": true, "after": true }],
+          "block-spacing": ["warn"],
+            "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+              "comma-dangle": ["error", "never"],
+                "comma-spacing": ["warn"],
+                  "computed-property-spacing": ["error", "never"],
+                    "eqeqeq": ["error", "smart"],
+                      "func-call-spacing": ["error", "never"],
+                        "key-spacing": ["error"],
+                          "keyword-spacing": ["error", { "before": true, "after": true }],
+                            "no-console": ["error", { "allow": ["count", "info", "warn", "table"] }],
+                              "no-debugger": ["warn"],
+                                "no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
+                                  "no-multi-spaces": ["error", { "ignoreEOLComments": false }],
+                                    "no-multiple-empty-lines": ["error", { "max": 1 }],
+                                      "no-unused-vars": ["warn", { "vars": "local", "args": "none", "ignoreRestSiblings": true }],
+                                        "no-var": ["error"],
+                                          "object-curly-spacing": ["error", "always"],
+                                            "prefer-arrow-callback": ["error"],
+                                              "prefer-const": ["error", { "destructuring": "all" }],
+                                                "prefer-destructuring": ["error"],
+                                                  "quote-props": ["error", "as-needed"],
+                                                    "quotes": ["error", "single", { "avoidEscape": true }],
+                                                      "semi": ["warn", "always"],
+                                                        "space-before-blocks": ["error"],
+                                                          "space-before-function-paren": ["error", "never"],
+                                                            "space-in-parens": ["error", "never"],
+                                                              "space-infix-ops": ["error"],
+
+                                                                "import/first": ["error"],
+                                                                  "import/newline-after-import": "error",
+                                                                    "import/no-duplicates": "error",
+                                                                      "import/no-named-default": "error",
+                                                                        "import/order": ["error", {
+                                                                          "groups": [
+                                                                            ["builtin", "external"],
+                                                                            ["index", "sibling", "parent", "internal"]
+                                                                          ],
+                                                                          "newlines-between": "always"
+                                                                        }
+                                                                        ],
+
+                                                                          "jsx-quotes": ["error", "prefer-double"],
+
+                                                                            "react/jsx-curly-spacing": [2, "never", { "spacing": { "objectLiterals": "never" } }],
+                                                                              "react/jsx-equals-spacing": [2, "never"],
+                                                                                "react/jsx-key": ["error"],
+                                                                                  "react/jsx-tag-spacing": ["error", { "beforeSelfClosing": "always" }],
+                                                                                    "react/jsx-wrap-multilines": ["error"],
+                                                                                      "react/prop-types": ["error"]
+  },
+  "settings": {
+    "import/external-module-folders": ["node_modules"],
+      "import/resolver": "webpack"
+  }
+}
